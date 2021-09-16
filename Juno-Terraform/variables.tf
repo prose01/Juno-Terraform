@@ -62,10 +62,6 @@ variable "auth0claimsnameidentifier" {
   description = "Auth0 Claims nameidentifier Address"
 }
 
-variable "auth0tokenaddress" {
-  description = "Auth0 Token Address"
-}
-
 variable "cryptography-key" {
   description = "Cryptography key"
 }
