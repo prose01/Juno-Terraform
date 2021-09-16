@@ -138,10 +138,10 @@ resource "azurerm_app_service_slot" "juno-slot" {
     }
 
     logs {
-        application_logs {
+        http_logs {
             file_system {
-                quota = 30     # in Megabytes
-                retention_period = 30     # in days
+                retention_in_mb = 30 # in Megabytes
+                retention_in_days = 7 # in days
             }
         }
     }
