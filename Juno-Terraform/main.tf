@@ -78,7 +78,6 @@ resource "azurerm_app_service" "juno" {
         "Auth0_Domain" = "${var.auth0domain}"
         "Auth0_ApiIdentifier" = "${var.auth0apiIdentifier}"
         "Auth0_Claims_nameidentifier" = "${var.auth0claimsnameidentifier}"
-        "Auth0_TokenAddress" = "${var.auth0tokenaddress}"
         "Cryptography_Key" = "${var.cryptography-key}"
         "Cryptography_IV" = "${var.cryptography-iv}"
     }
@@ -134,7 +133,6 @@ resource "azurerm_app_service_slot" "juno-slot" {
         "Auth0_Domain" = "${var.auth0domain}"
         "Auth0_ApiIdentifier" = "${var.auth0apiIdentifier}"
         "Auth0_Claims_nameidentifier" = "${var.auth0claimsnameidentifier}"
-        "Auth0_TokenAddress" = "${var.auth0tokenaddress}"
         "Cryptography_Key" = "${var.cryptography-key}"
         "Cryptography_IV" = "${var.cryptography-iv}"
     }
