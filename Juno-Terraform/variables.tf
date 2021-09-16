@@ -50,6 +50,10 @@ variable "allowedhosts" {
   description = "Used for host filtering to bind your app to specific hostnames. The value is a semicolon-delimited list of host names without port numbers."
 }
 
+variable "auth0domain" {
+  description = "Auth0 Domain Address"
+}
+
 variable "auth0apiIdentifier" {
   description = "Auth0 ApiIdentifier Address"
 }
