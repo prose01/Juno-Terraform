@@ -61,3 +61,11 @@ variable "auth0claimsnameidentifier" {
 variable "auth0tokenaddress" {
   description = "Auth0 Token Address"
 }
+
+variable "cryptography-key" {
+  description = "Cryptography key"
+}
+
+variable "cryptography-iv" {
+  description = "Cryptography IV"
+}

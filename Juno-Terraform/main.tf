@@ -73,7 +73,14 @@ resource "azurerm_app_service" "juno" {
     }
 
     app_settings = {
-        "SOME_KEY" = "some-value"
+        "AllowedHosts" = "${var.allowedhosts}"
+        "Mongo_Database" = "Avalon"
+        "Auth0_Domain" = "${var.auth0domain}"
+        "Auth0_ApiIdentifier" = "${var.auth0apiIdentifier}"
+        "Auth0_Claims_nameidentifier" = "${var.auth0claimsnameidentifier}"
+        "Auth0_TokenAddress" = "${var.auth0tokenaddress}"
+        "Cryptography_Key" = "${var.cryptography-key}"
+        "Cryptography_IV" = "${var.cryptography-iv}"
     }
 
     # connection_string {
@@ -122,7 +129,14 @@ resource "azurerm_app_service_slot" "juno-slot" {
     }
 
     app_settings = {
-        "SOME_KEY" = "some-value"
+        "AllowedHosts" = "${var.allowedhosts}"
+        "Mongo_Database" = "Avalon"
+        "Auth0_Domain" = "${var.auth0domain}"
+        "Auth0_ApiIdentifier" = "${var.auth0apiIdentifier}"
+        "Auth0_Claims_nameidentifier" = "${var.auth0claimsnameidentifier}"
+        "Auth0_TokenAddress" = "${var.auth0tokenaddress}"
+        "Cryptography_Key" = "${var.cryptography-key}"
+        "Cryptography_IV" = "${var.cryptography-iv}"
     }
 
     # connection_string {
