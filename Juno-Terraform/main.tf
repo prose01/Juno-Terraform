@@ -45,7 +45,7 @@ resource "azurerm_app_service_plan" "juno-plan" {
     
     sku {
         tier = "Standard"
-        size = "S1"
+        size = "P1V2"
     }
 
     tags = {
@@ -62,7 +62,7 @@ resource "azurerm_app_service" "juno" {
 
     site_config {
         dotnet_framework_version = "v5.0"
-        linux_fx_version = "v5.0"
+        linux_fx_version = "DOTNETCORE|v5.0"
         # remote_debugging_enabled = true
         # remote_debugging_version = "VS2019"
         always_on = "true"
@@ -118,6 +118,7 @@ resource "azurerm_app_service_slot" "juno-slot" {
 
     site_config {
         dotnet_framework_version = "v5.0"
+        linux_fx_version = "DOTNETCORE|v5.0"
         # remote_debugging_enabled = true
         # remote_debugging_version = "VS2019"
         always_on = "true"
